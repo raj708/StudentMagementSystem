@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1">
+            <tr>
+                <th>Roll</th>
+                <th>Name</th>
+                <th>Branch</th>
+            </tr>
+            <tr>
+                <td th:text="${student.kodId}"/>
+                <td th:text="${student.name}"/>
+                <td th:text="${student.branch}" />
+            </tr>
+        </table>
+        
+
+</body>
+</html>
