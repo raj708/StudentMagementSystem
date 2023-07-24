@@ -11,7 +11,7 @@
                 <th>Name</th>
                 <th>Branch</th>
             </tr>
-            <tr>
+            <tr th:each="student : ${student}">
                 <td th:text="${student.kodId}"/>
                 <td th:text="${student.name}"/>
                 <td th:text="${student.branch}" />

@@ -1,5 +1,7 @@
 package com.example.studentCrud.api;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,10 +39,12 @@ public class StudentMappingController {
 	}
     
 //    //ShowDetail.html page view
-//    @GetMapping("/showDetails")
-//	public String showDetailPage() {
-//		return "showDetails";		
-//	}
+   @GetMapping("/showDetails")
+	public String showDetailPage(Model model) {
+	   List<Student> studentList=ss.getAllStudent();
+	   model.addAttribute("student", studentList);
+		return "showDetails";		
+	}
     //add data to database
     @PostMapping("/addStud")
 	public String addStudent(@RequestParam("roll") String kodId,@RequestParam("name") String name,@RequestParam("branch") String branch) {
